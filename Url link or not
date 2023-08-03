@@ -1,0 +1,18 @@
+%{
+%}
+ 
+%%
+
+[http:\\www.][a-z]+".com" {printf("link is valid");}
+.+ {printf("link invalid");}
+
+%%
+
+int yywrap()
+{}
+
+int main()
+{
+printf("enter the link:");
+yylex();
+}
